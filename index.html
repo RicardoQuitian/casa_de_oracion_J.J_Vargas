@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa de Oración J.J. Vargas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="icons/logo_casa_horacion.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button id="toggle-mode" class="mode-toggle">🌙</button>
+
+  <header class="header">
+    <div class="logo-container">
+      <img src="img/Logo_casa_de_oración.png.png" alt="Logo" class="logo-img" />
+      <h1 class="logo-title">Casa de Oración J.J. Vargas</h1>
+    </div>
+    <nav id="navbar">
+      <a href="#about">Nosotros</a>
+      <a href="#templo">Templo</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <button id="menu-toggle">☰</button>
+  </header>
+
+  <section id="bienvenida" class="bienvenida section fade-in">
+    <h2>Bienvenido</h2>
+    <p id="frase"></p>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <h2>Sobre Nosotros</h2>
+    <div class="sobre-nosotros">
+      <p>• Casa de oración comprometida con el amor de Dios.</p>
+      <p>• Lugar de encuentro, fe y restauración espiritual.</p>
+      <p>• Comunidad activa en servicio y enseñanza bíblica.</p>
+      <p>• Espacio acogedor donde puedes crecer espiritualmente.</p>
+      <p>• Unidos como una gran familia en Cristo.</p>
+    </div>
+  </section>
+
+  <section id="templo" class="section fade-in">
+    <h2>Templo</h2>
+    <div class="carousel"></div>
+  </section>
+
+  <section id="comunidad" class="section fade-in">
+    <h2>Comunidad</h2>
+    <div class="carousel" id="comunidad-carousel"></div>
+  </section>
+
+  <section id="contacto" class="section contacto fade-in">
+    <h2>¿Tienes inquietudes?</h2>
+    <p>¡Con gusto te escuchamos!</p>
+    <p class="subcontacto">Puedes escribirnos directamente por WhatsApp.</p>
+    <a class="whatsapp-btn" href="https://wa.me/573044709915" target="_blank">
+      <img src="icons/WhatsApp.png" alt="WhatsApp Logo" class="icono-wsp" />
+      Escribir por WhatsApp
+    </a>
+  </section>
+
+  <section id="ubicacion" class="section ubicacion fade-in">
+    <h2>Dirección</h2>
+    <div class="mapa-container">
+      <p class="direccion">Av. 68 #67F - 12, Bogotá</p>
+      <iframe
+        src="https://www.google.com/maps?q=Av.+68+%2367F+-+12,+Bogotá&output=embed"
+        allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>Casa de Oración J.J. Vargas</p>
+    <p>Dirección: Av. 68 #67F - 12, Bogotá</p>
+    <p>WhatsApp: +57 304 4709915</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
