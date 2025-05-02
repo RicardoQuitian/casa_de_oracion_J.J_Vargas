@@ -40,20 +40,20 @@ if (fraseContainer) {
 }
 
 const comunidadImgs = [
-  "/img/img_comunidad_1.jpeg",
-  "/img/img_comunidad_2.jpeg",
-  "/img/img_comunidad_3.jpeg",
-  "/img/img_comunidad_4.jpeg",
-  "/img/img_comunidad_5.jpeg",
-  "/img/img_comunidad_6.jpeg",
-  "/img/img_comunidad_7.jpeg",
-  "/img/img_comunidad_8.jpeg",
-  "/img/img_comunidad_9.jpeg",
-  "/img/img_comunidad_10.jpeg",
-  "/img/img_comunidad_11.jpeg",
-  "/img/img_comunidad_12.jpeg",
-  "/img/img_comunidad_13.jpeg",
-  "/img/img_comunidad_14.jpeg",
+  "img/img_comunidad_1.jpeg",
+  "img/img_comunidad_2.jpeg",
+  "img/img_comunidad_3.jpeg",
+  "img/img_comunidad_4.jpeg",
+  "img/img_comunidad_5.jpeg",
+  "img/img_comunidad_6.jpeg",
+  "img/img_comunidad_7.jpeg",
+  "img/img_comunidad_8.jpeg",
+  "img/img_comunidad_9.jpeg",
+  "img/img_comunidad_10.jpeg",
+  "img/img_comunidad_11.jpeg",
+  "img/img_comunidad_12.jpeg",
+  "img/img_comunidad_13.jpeg",
+  "img/img_comunidad_14.jpeg",
 ];
 function renderCarousel(images, containerId) {
   const container = document.querySelector(containerId);
