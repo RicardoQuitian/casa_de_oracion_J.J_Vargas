@@ -1,9 +1,7 @@
-// Menú responsive
 document.getElementById('menu-toggle')?.addEventListener('click', () => {
   document.getElementById('navbar')?.classList.toggle('active');
 });
 
-// Frases aleatorias (solo si existe el contenedor)
 const frases = [
   "Dios está con nosotros en cada paso de nuestro camino, incluso cuando no lo podemos ver. (Isaías 41:10)",
 "La oración es el lenguaje del alma que conecta nuestro corazón con el cielo. (Filipenses 4:6)",
@@ -41,15 +39,21 @@ if (fraseContainer) {
   fraseContainer.innerText = frases[Math.floor(Math.random() * frases.length)];
 }
 
-// Carrusel de imágenes (solo si aplica)
 const comunidadImgs = [
-  "img/img_comunidad_1.jpeg",
-  "img/img_comunidad_2.jpeg",
-  "img/img_comunidad_3.jpeg",
-  "img/img_comunidad_4.jpeg",
-  "img/img_comunidad_5.jpeg",
-  "img/img_comunidad_6.jpeg",
-  "img/img_comunidad_7.jpeg"
+  "/img/img_comunidad_1.jpeg",
+  "/img/img_comunidad_2.jpeg",
+  "/img/img_comunidad_3.jpeg",
+  "/img/img_comunidad_4.jpeg",
+  "/img/img_comunidad_5.jpeg",
+  "/img/img_comunidad_6.jpeg",
+  "/img/img_comunidad_7.jpeg",
+  "/img/img_comunidad_8.jpeg",
+  "/img/img_comunidad_9.jpeg",
+  "/img/img_comunidad_10.jpeg",
+  "/img/img_comunidad_11.jpeg",
+  "/img/img_comunidad_12.jpeg",
+  "/img/img_comunidad_13.jpeg",
+  "/img/img_comunidad_14.jpeg",
 ];
 function renderCarousel(images, containerId) {
   const container = document.querySelector(containerId);
@@ -65,7 +69,6 @@ function renderCarousel(images, containerId) {
 }
 renderCarousel(comunidadImgs, "#comunidad-carousel");
 
-// Modo oscuro persistente
 const toggleBtn = document.getElementById('toggle-mode');
 toggleBtn?.addEventListener('click', () => {
   const isDark = document.body.classList.toggle('dark-mode');
@@ -77,7 +80,6 @@ if (localStorage.getItem('modoOscuro') === 'true') {
   if (toggleBtn) toggleBtn.textContent = '☀️';
 }
 
-// Fade-in animaciones
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
