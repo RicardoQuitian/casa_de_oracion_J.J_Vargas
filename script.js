@@ -1,9 +1,11 @@
+// Menú responsive
 document.getElementById('menu-toggle')?.addEventListener('click', () => {
-  document.getElementById('navbar').classList.toggle('active');
+  document.getElementById('navbar')?.classList.toggle('active');
 });
 
+// Frases aleatorias (solo si existe el contenedor)
 const frases = [
-"Dios está con nosotros en cada paso de nuestro camino, incluso cuando no lo podemos ver. (Isaías 41:10)",
+  "Dios está con nosotros en cada paso de nuestro camino, incluso cuando no lo podemos ver. (Isaías 41:10)",
 "La oración es el lenguaje del alma que conecta nuestro corazón con el cielo. (Filipenses 4:6)",
 "El amor de Dios nunca falla, siempre permanece fiel aún cuando nosotros no lo somos. (1 Corintios 13:8)",
 "Vienen bendiciones que sobrepasarán tu entendimiento; Dios ya está obrando a tu favor. (Efesios 3:20)",
@@ -34,47 +36,48 @@ const frases = [
 "El Espíritu Santo te guía cuando te faltan las fuerzas o la dirección. (Juan 14:26)",
 "Dios nunca llega tarde; Él siempre actúa en el momento perfecto. (Eclesiastés 3:11)"
 ];
-document.getElementById("frase").innerText = frases[Math.floor(Math.random() * frases.length)];
+const fraseContainer = document.getElementById("frase");
+if (fraseContainer) {
+  fraseContainer.innerText = frases[Math.floor(Math.random() * frases.length)];
+}
 
-const temploImgs = [
-  "img/img_templo_1.jpg",
-  "img/img_templo_2.jpg",
-  "img/img_templo_3.jpg",
-  "img/img_templo_4.jpg",
-  "img/img_templo_5.jpg"
-];
+// Carrusel de imágenes (solo si aplica)
 const comunidadImgs = [
-  "img/img_comunidad_1.jpg",
-  "img/img_comunidad_2.jpg",
-  "img/img_comunidad_3.jpg",
-  "img/img_comunidad_4.jpg",
-  "img/img_comunidad_5.jpg"
+  "img/img_comunidad_1.jpeg",
+  "img/img_comunidad_2.jpeg",
+  "img/img_comunidad_3.jpeg",
+  "img/img_comunidad_4.jpeg",
+  "img/img_comunidad_5.jpeg",
+  "img/img_comunidad_6.jpeg",
+  "img/img_comunidad_7.jpeg"
 ];
-
 function renderCarousel(images, containerId) {
   const container = document.querySelector(containerId);
-  images.forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = "Imagen";
-    img.onclick = () => window.open(src, "_blank");
-    container.appendChild(img);
-  });
+  if (container) {
+    images.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = "Imagen";
+      img.onclick = () => window.open(src, "_blank");
+      container.appendChild(img);
+    });
+  }
 }
-renderCarousel(temploImgs, "#templo .carousel");
 renderCarousel(comunidadImgs, "#comunidad-carousel");
 
+// Modo oscuro persistente
 const toggleBtn = document.getElementById('toggle-mode');
-toggleBtn.addEventListener('click', () => {
+toggleBtn?.addEventListener('click', () => {
   const isDark = document.body.classList.toggle('dark-mode');
   localStorage.setItem('modoOscuro', isDark ? 'true' : 'false');
   toggleBtn.textContent = isDark ? '☀️' : '🌙';
 });
 if (localStorage.getItem('modoOscuro') === 'true') {
   document.body.classList.add('dark-mode');
-  toggleBtn.textContent = '☀️';
+  if (toggleBtn) toggleBtn.textContent = '☀️';
 }
 
+// Fade-in animaciones
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {

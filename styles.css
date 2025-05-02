@@ -20,6 +20,7 @@ body {
   text-align: center;
 }
 
+/* Encabezado */
 .header {
   background: #d0e6ff;
   padding: 1.5rem;
@@ -41,7 +42,7 @@ body {
   filter: drop-shadow(0 0 8px rgba(0, 85, 170, 0.6));
 }
 .logo-img {
-  height: 180px;
+  height: 150px;
   margin-bottom: 0.5rem;
 }
 .logo-title {
@@ -50,6 +51,7 @@ body {
   margin: 0;
 }
 
+/* Navegación */
 nav {
   display: flex;
   justify-content: center;
@@ -62,7 +64,6 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
-
 #menu-toggle {
   display: none;
   background: none;
@@ -71,11 +72,13 @@ nav a {
   border: none;
 }
 
+/* Bienvenida */
 .bienvenida {
   background: #0074cc;
   color: white;
 }
 
+/* Carrusel */
 .carousel {
   display: flex;
   overflow-x: auto;
@@ -93,16 +96,7 @@ nav a {
   transform: scale(1.05);
 }
 
-.sobre-nosotros p {
-  margin: 0.8rem 0;
-  transition: transform 0.3s, color 0.3s;
-  cursor: default;
-}
-.sobre-nosotros p:hover {
-  transform: scale(1.1);
-  color: #0055aa;
-}
-
+/* Contacto */
 .subcontacto {
   margin-bottom: 1.5rem;
 }
@@ -121,6 +115,7 @@ nav a {
   font-weight: bold;
 }
 
+/* Mapa */
 .mapa-container {
   padding: 1rem;
   background: #fff;
@@ -137,6 +132,7 @@ nav a {
   border: none;
 }
 
+/* Footer */
 footer {
   background: var(--accent-color);
   color: white;
@@ -145,6 +141,7 @@ footer {
   margin-top: 2rem;
 }
 
+/* Botón modo oscuro */
 .mode-toggle {
   position: fixed;
   right: 15px;
@@ -162,6 +159,7 @@ footer {
   background: #0055aa;
 }
 
+/* Modo nocturno */
 .dark-mode {
   --bg-color: #1a1a1a;
   --text-color: #f0f0f0;
@@ -172,7 +170,101 @@ footer {
   background: #ffc107;
   color: #1a1a1a;
 }
+.dark-mode .header,
+.dark-mode .bienvenida,
+.dark-mode footer {
+  background: #2e2e2e;
+  color: white;
+}
+.dark-mode .logo-title,
+.dark-mode nav a {
+  color: white;
+}
+.dark-mode nav {
+  background: #2e2e2e;
+}
+.dark-mode .versiculo {
+  background: #3a3a3a;
+  color: white;
+}
+.dark-mode .declaracion h3,
+.dark-mode .declaracion h4,
+.dark-mode .declaracion h5 {
+  color: white;
+}
 
+/* Versículo destacado */
+.versiculo {
+  background: #cce0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #003366;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.horarios ul {
+  list-style: none;
+  padding-left: 0;
+}
+.horarios li {
+  margin: 0.5rem 0;
+}
+
+/* Botones sociales */
+.social-btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.social-btn:hover {
+  transform: scale(1.05);
+}
+.social-btn .social-icon {
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.social-btn.red {
+  background: #cc0000;
+}
+.social-btn.blue {
+  background: #1877F2;
+}
+.social-btn.green {
+  background: #25D366;
+}
+
+/* Declaración de Fe */
+.declaracion {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.declaracion h3 {
+  margin-top: 2rem;
+  color: var(--accent-color);
+}
+.declaracion h4,
+.declaracion h5 {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Animaciones */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
@@ -185,6 +277,7 @@ footer {
   }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -196,28 +289,4 @@ footer {
   #menu-toggle {
     display: block;
   }
-}
-
-.dark-mode .header {
-  background: #2e2e2e;
-  color: white;
-}
-
-.dark-mode .logo-title {
-  color: white;
-}
-.dark-mode nav {
-  background: #2e2e2e;
-}
-.dark-mode nav a {
-  color: white;
-}
-
-.dark-mode footer {
-  background: #2e2e2e;
-  color: white;
-}
-.dark-mode .bienvenida {
-  background: #2e2e2e;
-  color: white;
 }
